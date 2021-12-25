@@ -1,0 +1,10 @@
+run npm i to install dependencies
+
+paste below in .env file:
+REACT_APP_CREATEURL = "http://localhost:5000/api/booking/create"
+REACT_APP_GETURL = "http://localhost:5000/api/booking/update"
+REACT_APP_GETLIST = "http://localhost:5000/api/booking"
+REACT_APP_UPDATEURL = "http://localhost:5000/api/booking/update"
+REACT_APP_DELETEURL = "http://localhost:5000/api/booking/delete"
+
+to start server: npm start
