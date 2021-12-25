@@ -29,7 +29,7 @@ const UpdatePage = (props) => {
 		time: time 
 	})
 	.then((response) => {
-		console.log("response::"+response.data);
+		console.log("response::"+JSON.stringify(response.data));
 		alert("Update Success!!\n"+JSON.stringify(response.data));
 		setPost(response.data);
 		refreshPage();
