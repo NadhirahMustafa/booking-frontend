@@ -1,8 +1,15 @@
+This frontend repository is meant to get the request from user and pass it to the backend and provide response to user.
+User should be able to view the single-page web with the list of appointment, form to create the new appointment, form to update the existing appointment,
+and form to cancel their appointment.
+Any error message regarding invalid appointment date/time i.e: booking time lesser than two days or more than three weeks than current date,
+or occupied time slot will be displayed as pop out after user submit their request.
+Any new appoinment or updated appointment details will be automatically updated in the list of appointment.
+User supposed to be able to track their appointment in the booking list.
+
 run npm i to install dependencies
 
 paste below in .env file:
 REACT_APP_CREATEURL = "http://localhost:5000/api/booking/create"
-REACT_APP_GETURL = "http://localhost:5000/api/booking/update"
 REACT_APP_GETLIST = "http://localhost:5000/api/booking"
 REACT_APP_UPDATEURL = "http://localhost:5000/api/booking/update"
 REACT_APP_DELETEURL = "http://localhost:5000/api/booking/delete"
