@@ -5,6 +5,7 @@ Any error message regarding invalid appointment date/time i.e: booking time less
 or occupied time slot will be displayed as pop out after user submit their request.
 Any new appoinment or updated appointment details will be automatically updated in the list of appointment.
 User supposed to be able to track their appointment in the booking list.
+Please run the backend repository as well for the system to function well.
 
 run npm i to install dependencies
 
