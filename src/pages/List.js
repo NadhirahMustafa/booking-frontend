@@ -3,7 +3,6 @@ import axios from "axios";
 import moment from "moment";
 import "../styles/table.css";
 import "../styles/page.css";
-// import ReactTable from "react-table";
 import { Card, CardBody, CardTitle, CardHeader } from "reactstrap";
 import "../styles/table.css";
 const { REACT_APP_GETLIST } = process.env;
@@ -14,7 +13,6 @@ const ListPage = () => {
   React.useEffect(() => {
     axios.get(REACT_APP_GETLIST).then((response) => {
       console.log("list::", response.data);
-      // manipulate response.data (assign ke table) dekat sini
       setPost(response.data);
     });
   }, []);
@@ -73,9 +71,10 @@ const ListPage = () => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag="h5" className="page-title">
+        <CardTitle tag="h4" className="page-title">
           Booking List
         </CardTitle>
+        <h6>Track your appointment here</h6>
       </CardHeader>
       <table classname="App">
         <thead>

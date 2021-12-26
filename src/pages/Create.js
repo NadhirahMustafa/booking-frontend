@@ -35,17 +35,17 @@ const CreatePage = (props) => {
         refreshPage();
       })
       .catch((e) => {
-        alert("Request failed!\n" + e.response.data.message);
-        console.log("ERRORRR:::" + e.response.data.message);
+        alert("Request failed!\n" + e.response.data.error.message);
       });
   };
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle tag="h5" className="page-title">
-          Book Appointment
+        <CardTitle tag="h4" className="page-title">
+          Book An Appointment
         </CardTitle>
+        <h6>Book your appointment here</h6>
       </CardHeader>
 
       <CardBody>
@@ -68,7 +68,6 @@ const CreatePage = (props) => {
             <input
               type="date"
               name="app-date"
-              placeholder="yyyy-mm-dd"
               className="page-input"
               value={date}
               onChange={(e) => setDate(e.target.value)}

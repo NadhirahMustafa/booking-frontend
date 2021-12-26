@@ -36,14 +36,15 @@ const UpdatePage = (props) => {
 	})
 	.catch((e) => {
     alert("Request failed!\n" + e.response.data.error.message);
-    console.log("ERRORRR:::" + e.response.data.error.message);
+    console.log("ERROR:::" + e.response.data.error.message);
   });
   }
 
   return (
       <Card>
       <CardHeader>
-        <CardTitle tag="h5" className="page-title">Update Appointment Details</CardTitle>
+        <CardTitle tag="h4" className="page-title">Update Appointment Details</CardTitle>
+        <h6>Key in your booking ID, and choose the date and time here to update your appointment details.</h6>
       </CardHeader>
 
       <CardBody>
@@ -95,7 +96,7 @@ const UpdatePage = (props) => {
         </div>
 
         <div>
-        <Button className="page-button" onClick={updateBooking} disabled={!id || !time || !date}>
+        <Button className="page-button" onClick={updateBooking} style={{ width: 120 }} disabled={!id || !time || !date}>
           Update{" "}
         </Button>
         </div>

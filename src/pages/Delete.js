@@ -30,14 +30,15 @@ const DeletePage = (props) => {
 	})
 	.catch((e) => {
 		alert('Request failed!\nPlease contact administrator');
-		console.log("ERRORRR:::"+e.response.data.error.message)
+		console.log("ERROR:::"+e.response.data.error.message)
 	});
   }
 
   return (
       <Card>
       <CardHeader>
-        <CardTitle tag="h5" className="page-title">Delete Appointment</CardTitle>
+        <CardTitle tag="h4" className="page-title">Cancel Appointment</CardTitle>
+        <h6>Delete your booking ID here to cancel your appointment</h6>
       </CardHeader>
 
       <CardBody>
@@ -54,7 +55,7 @@ const DeletePage = (props) => {
         </Label>
         </div>
 
-        <div margin-top = "10%">
+        <div>
         <Button onClick={deleteBooking} style = {{width: 120}} className="page-button">
           Delete{" "}
         </Button>
